@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i');
+
+* {
+    box-sizing: border-box;
+   }
+
+
+a {
+    text-decoration: none;
+    color: #333333;
+  }
+
+h1 {
+    font-size: 2rem;
+     }
+
+h2 {
+    font-size: 2rem;
+    z-index: 2;
+  }
+
+h3 {
+    font-family: "Cabin";
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: #333;
+   }
+
+h4 {
+    font-size: 1.25rem;
+  }
+
+h5 {
+    font-size: 1.125rem;
+  }
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Cabin", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    width: auto;
+    height: auto;
+}
+
+/* 벚꽃배경 */
+header {
+    background-color: #bbbbbb;
+    background-image: url(KakaoTalk_20231024_183900227.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    /*filter: brightness(80%);*/
+    padding: 0;
+    width: 100%;
+    min-height: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-filter {
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    width: 100%;
+    min-height: inherit;
+    position: absolute;
+    z-index: 0;
+}
+/* 제목 */
+header h4 {
+    color: white;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    text-align: center;
+    z-index: 1;
+    display: flex;
+    align-self: center;
+}
+
+
+.nav-desktop {
+    background-color: white;
+    padding: 10px;
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media screen and (max-width: 850px) {
+    .nav-desktop {
+        display: none;
+    }
+}
+
+.nav-logo {
+    /*5background-color: aqua;*/
+    padding: 0 0 0 25px;
+    width: auto;
+    height: 28px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s;
+}
+
+.nav-logo:hover {
+    transform: translate(0, 0) scale(1.04);
+    transform-origin: center bottom;
+}
+
+.nav-logo svg:hover {
+    box-shadow: 5px 10px 10px rgba(56, 56, 56, 1);
+}
+/* 위에 세로선 */
+.nav-separator {
+    margin: 0 15px;
+    background-color: #333333;
+    display: flex;
+    width: 1px;
+    height: 1.5em;
+}
+
+.nav-desktop ul {
+    padding: 0 20px 0 0;
+    /*background-color: aquamarine;*/
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    align-self: right;
+    min-height: inherit;
+    margin: 0 0 0 auto;
+  }
+
+.nav-desktop li {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+  }
+/* 위에버튼 */
+.feat-link a {
+    padding: 5px 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    border-style: 1px solid black;
+    transition: all 0.3s;
+    transition-timing-function: ease;
+
+  }
+
+.feat-link a:hover {
+    box-shadow: 2.5px 4px rgb(51, 51, 51);
+    transform: translate(-2px, -2px);
+    border-style: 1px solid black;
+    /* font-weight: 600; */
+  }
+/* 모바일메뉴 */
+.dropdown-menu a {
+    padding: 5px 15px;
+    font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+    color: #666;
+    transition: all 0.3s;
+    transition-timing-function: ease-out;
+    /*align-items: center;*/
+  }
+
+  .dropdown-menu a:hover {
+    /* font-weight: 500; */
+    box-shadow: 2.5px 4px rgb(63, 178, 139);
+    transform: translate(0, -2px);
+  }
+
+.dropdown-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-menu li {
+    padding: 12px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.dropdown-menu li:active {
+    background-color: #3fb28b;
+}
+
+.dropdown-menu li:active a {
+    color: white;
+}
+
+.nav-responsive {
+    background-color: white;
+    padding: 10px 15px;
+    width: 100vw;
+    min-height: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 대학로고 */
+.nav-logo-resp {
+    background-image: url(https://www.bufs.ac.kr/);
+    /* background-color: #333; */
+    height: 24px;
+    width: 12px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    z-index: 2;
+}
+
+/* .nav-logo-resp a {
+    display: flex;
+} */
+/* 모바일메뉴 */
+.hamburger {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #f1f1f1;
+    height: 21px;
+    width: 32px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    cursor: pointer;
+}
+
+.rectangle {
+  display: flex;
+  background-color: #bbbbbb;
+  height: 4px;
+  width: 100%;
+}
+
+.dropdown-menu {
+    background-color: #f0f0f0;
+    padding: 16px;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.2s;
+    transition-timing-function: ease-out;
+}
+
+.dropdown-menu.visible {
+    background-color: #fff;
+    box-shadow: 4px 12px 20px rgba(3, 38, 43, 0.164); 
+    padding: 16px;
+    width: 100%;
+    position: absolute;
+    opacity: 1;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    transition: all 0.2s;
+    transition-timing-function: ease-out;
+    pointer-events: unset;
+}
+
+@media screen and (min-width: 850px) {
+    .nav-responsive {
+        display: none;
+    }
+
+    .dropdown-menu.visible {
+        display: none;
+    }
+
+}
+
+section {
+    padding: 32px auto;
+    display: flex;
+    justify-content: center;
+    height: auto;
+
+}
+
+section.featured {
+    background-color: #f0f0f0;
+    padding: 0 0 64px 0;
+    display: flex;
+    flex-direction: column;
+    /*min-width: 100vh;*/
+    min-height: 55vh;
+    /*width: 100%;*/
+    justify-content: center;
+}
+/* 사진버튼 */
+.card-container {
+    /*background-color: gray;*/
+    margin: 10px auto;
+    width: 1300px;
+    max-width: 1300px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 목차 */
+.title-container {
+    /*background-color: gray;*/
+    margin: 64px 0;
+    padding: 0 0 0 20px;
+    /* width: 960px; */
+    width: 200px;
+    /* width: 95vw; */
+    height: auto;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    /* flex-wrap: nowrap; */
+    justify-content: flex-start;
+    /* align-items: center; */
+}
+
+.title-container h3 {
+    margin: 0 auto 0 0;
+    display: inline-flex;
+    color: #333;
+}
+/* 사진버튼 */
+.card {
+    margin: 20px;
+    background-color: honeydew;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    width: 288px;
+    height: 304px;
+    box-shadow: 5px 5px 20px rgba(75, 72, 78, 0.25);
+    overflow: hidden;
+    transform: translate(0, 0);
+    transition: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.card:hover {
+    transform: translate(0, -8px);
+
+}
+
+.card-20 {
+    background-image: url(KakaoTalk_20231024_174423426.png);
+    background-size: cover;
+}
+
+.card-turning {
+    background-image: url(KakaoTalk_20231024_183900227_01.jpg);
+    background-size: cover;
+
+}
+
+.card-modoru {
+    background-image: url(images.png);
+    background-size: cover;
+    
+
+}
+.card-hitogoto {
+    background-image: url(go.png);
+    background-size: cover;
+
+
+}
+
+.card-summary {
+    background-color: rgba(255,255,255,1);
+    padding: 0px 10px 5px 10px;
+    /* filter: grayscale(100%);*/
+    /*fill-opacity: 50%;*/
+    mix-blend-mode: normal;
+    width: 100%;
+    height: auto;
+    position: relative;
+    text-overflow: ellipsis;
+    transform: translate(0,94px);
+    line-height: 24px;
+    transition: 0.3s;
+    transition-timing-function: ease;
+    display: inline-block;
+}
+
+.card-summary h4 {
+    line-height: 1em;
+    padding: 0px;
+    margin: 16px 0;
+  }
+
+
+.card:hover .card-summary {
+    transform: translate(0, 0);
+  }
+
+
+.footer {
+    background-color: #ffffff;
+    height: 64px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+p.small {
+    font-size: 0.875rem;
+
+}
+/* 초록버튼 */
+.cta-main {
+    /*background-color: #3fb28b;*/
+    background-image: linear-gradient(-64deg, #3ac093, #15e2c7);
+    margin: 64px auto;
+    padding: 16px 30px;
+    height: 48px;
+    width: auto;
+    border-radius: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    transform: translate(0, 0);
+    transition: 0.3s;  
+}
+
+.cta-main:hover {
+    box-shadow: 5px 5px 20px rgba(7, 131, 110, 0.25);
+    transform: translate(0, -5px);
+    background-image: linear-gradient(-34deg, #3ac093, #15e2c7);
+}
+
+.cta-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 0.6px;
+}
+
+@media screen and (max-width: 970px) {
+    
+    .title-container {
+        padding: 0;
+        text-align: center;
+        width: 150px;
+        /* max-width: unset; */
+        margin: 32px auto;
+    }
+
+    .card-container {
+        /*background-color: #bbbbbb;*/
+        flex-direction: column;
+        width: 80vw;
+        justify-content: space-around;
+    }
+
+    .card {
+        margin: 16px 0;
+    }
+
+    .popup-content{
+        height: 94%;
+        width: 94%;
+        font-size: 1rem;
+        color: black;
+    }
+    .popup-content2{
+        height: 85%;
+        width: 90%;
+        font-size: 1.05rem;
+        color: black;
+    }
+    .popup-content3{
+        height: 60%;
+        width: 90%;
+        font-size: 1.15rem;
+        color: black;
+    }
+    .popup-content4{
+        height: 80%;
+        width: 90%;
+        font-size: 1.05rem;
+        color: black;
+    }
+
+}
+/* 팝업 */
+
+  .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 배경을 어둡게 만듭니다. */
+    z-index: 1;
+    font-size: 1.5rem;
+    color: black;
+  }
+  
+  .popup-trigger:hover {
+    text-decoration: none;
+  }
+
+  .popup-content {
+    background-image:url(KakaoTalk_20231130_191203813_02.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+  }
+  .popup-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: -1;
+  }
+
+  .popup-content2 {
+    background-image:url(KakaoTalk_20231130_191203813_03.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  .popup-content2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: -1;
+  }
+
+  .popup-content3 {
+    background-image:url(KakaoTalk_20231130_191203813_04.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  .popup-content3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: -1;
+  }
+
+  .popup-content4 {
+    background-image:url(KakaoTalk_20231130_191203813_01.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .popup-content4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: -1;
+  }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+
+
+  
